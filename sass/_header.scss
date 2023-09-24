@@ -1,0 +1,116 @@
+@use 'variables' as v;
+
+header{
+    width: 100%;
+    // min-width: 340px;
+    height: 12.8rem;
+    background-color: v.$purple-color;
+    padding: 0 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6em;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+
+    .img-logo{
+        cursor: pointer;
+    }
+    .container-options{
+        display: flex;
+        gap: 1rem;
+        a{
+            color: v.$white-dark;
+            font-size: 1.8rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+            // display: flex;
+    //         align-items: center;
+            text-decoration: none;
+            position: relative;
+
+            &:hover{
+                cursor: pointer;
+                color: v.$white-color;
+            }
+
+            &:after{
+                content: '';
+                position: absolute;
+                background-color: v.$green-color;
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: all .3s;
+            }
+            &:hover:after{                
+                width: 100%;
+            }
+        }
+    }
+    .container-passport-burguer{
+        height: 100%;
+        .container-passport{
+            height: 100%;
+            background-color: v.$black-color;
+    //         width: auto;        
+            padding: 1.8rem 1.3rem;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background-color: v.$black-light;
+            } 
+            p{
+                color: v.$white-color;
+                font-size: 1.6rem; 
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .icon-passport{
+                width: 3.7rem;
+            }        
+        }
+        .icon-burguer{
+            display: none;
+        }
+    }    
+    .icon-user{
+        cursor:pointer;
+    }    
+
+}
+
+@media(width < 1200px){
+    header{
+        gap: 0;
+        height: 12.2rem;
+        padding: 0 1.6rem;
+        justify-content: space-between;
+        .img-logo{
+            width: 180px;
+        }        
+        .container-options, .icon-user{
+            display: none;
+        }
+        .container-passport-burguer{
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            .container-passport{
+                p{
+                    font-size: 1.3rem;
+                }
+            }            
+            .icon-burguer{
+                display: block;
+                width: 48px;
+                height: 48px;
+                cursor: pointer;
+            }
+        }
+    }
+}

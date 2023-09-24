@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+.slider{
+    background-color: red;
+    width: 100%;
+    height:calc(90vh - 12.8rem);
+    margin-top: 12.8rem;    
+    // img{
+    //     width: 150%;
+    //     height: 100%;
+    // }
+}
+@media(width < 1200px){
+    .slider{
+        // height:35rem;
+    height:calc(85vh - 25rem);
+    margin-top: 12.2rem;    
+
+    }
+}
+// @media(width < 400px){
+//     .slider{
+//         height:25rem;
+//     }
+// }
