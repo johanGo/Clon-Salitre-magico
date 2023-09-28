@@ -2,7 +2,7 @@
 
 .container-services{
     width: 90%;
-    max-width: 1200px;
+    max-width: 1140px;
     margin: -3.2rem auto 10rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,10 +47,10 @@
         }
         h2{
             color: v.$white-color;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.7rem;
             text-transform: uppercase;
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 2rem;
+            text-align: center;            
             margin-bottom: 1.6rem;      
         }
         img{
@@ -60,12 +60,12 @@
             width: 70%;
             color: v.$white-color;
             background-color: v.$purple-dark;
-            border-radius: 12px;
+            border-radius: 5px;
             text-align: center;
-            font-size: 2rem;
-            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.6rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             font-weight: bold;
-            padding: 0.6rem;
+            padding: 1rem;
             position: absolute;
             bottom: 4.8rem;
             left: 50%;
@@ -102,4 +102,3 @@
         }
     }
 }
-

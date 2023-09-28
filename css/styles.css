@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  height: 12.8rem;
+  height: 11rem;
   background-color: #7E4CEC;
   padding: 0 1.6rem;
   display: flex;
@@ -15,34 +15,122 @@ header .img-logo {
   cursor: pointer;
 }
 header .container-options {
-  display: flex;
-  gap: 1rem;
+  height: 100%;
 }
-header .container-options a {
+header .container-options .container-elementos {
+  list-style: none;
+  display: flex;
+  gap: 2.2rem;
+  height: 100%;
+}
+header .container-options .container-elementos li {
+  display: flex;
+  align-items: center;
+}
+header .container-options .container-elementos li:hover .container-atractions-hover {
+  display: flex;
+  transition: 0.3s all;
+}
+header .container-options .container-elementos li a {
   color: #ebebeb;
-  font-size: 1.8rem;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
-header .container-options a:hover {
+header .container-options .container-elementos li a:hover {
   cursor: pointer;
   color: #ffffff;
 }
-header .container-options a:after {
+header .container-options .container-elementos li a:after {
   content: "";
   position: absolute;
   background-color: #80FF83;
   height: 3px;
   width: 0;
   left: 0;
-  bottom: -10px;
+  bottom: -6px;
   transition: all 0.3s;
 }
-header .container-options a:hover:after {
+header .container-options .container-elementos li a:hover:after {
   width: 100%;
+}
+header .container-options .container-elementos li .container-atractions-hover {
+  width: 90%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 1rem 3rem 3rem;
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: 0.3s all;
+  z-index: -10;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements:hover {
+  background-color: rgba(127, 76, 236, 0.2588235294);
+  transition: 0.3s all;
+  cursor: pointer;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements h3 {
+  color: #000000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements img {
+  width: 260px;
+  height: 150px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements p {
+  font-size: 1.5rem;
+  color: #494949;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements .imagen1 {
+  border: 5px solid #f26f23;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements .imagen2 {
+  border: 5px solid #f49726;
+}
+header .container-options .container-elementos li .container-atractions-hover .elements .imagen3 {
+  border: 5px solid #20a1da;
+}
+header .container-options .container-elementos li .container-atractions-hover ul {
+  width: 280px;
+  list-style: none;
+  padding-top: 5rem;
+  margin-left: 4rem;
+}
+header .container-options .container-elementos li .container-atractions-hover ul li {
+  font-size: 1.5rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #494949;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid #494949;
+}
+header .container-options .container-elementos li .container-atractions-hover ul li:hover {
+  color: #7E4CEC;
+  cursor: pointer;
+}
+header .container-options .container-elementos li .container-atractions-hover ul li img {
+  margin-right: 1rem;
+}
+header .container-options .container-elementos li .container-atractions-hover ul li:last-of-type {
+  border: none;
 }
 header .container-passport-burguer {
   height: 100%;
@@ -50,7 +138,11 @@ header .container-passport-burguer {
 header .container-passport-burguer .container-passport {
   height: 100%;
   background-color: #000000;
-  padding: 1.8rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.3rem;
   text-align: center;
   cursor: pointer;
 }
@@ -77,12 +169,12 @@ header .icon-user {
 @media (width < 1200px) {
   header {
     gap: 0;
-    height: 12.2rem;
+    height: 9rem;
     padding: 0 1.6rem;
     justify-content: space-between;
   }
   header .img-logo {
-    width: 180px;
+    width: 14rem;
   }
   header .container-options, header .icon-user {
     display: none;
@@ -97,27 +189,32 @@ header .icon-user {
   }
   header .container-passport-burguer .icon-burguer {
     display: block;
-    width: 48px;
-    height: 48px;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
   }
 }
 .slider {
   background-color: red;
   width: 100%;
-  height: calc(90vh - 12.8rem);
-  margin-top: 12.8rem;
+  min-width: 300px;
+  height: calc(100vh - 16rem);
+  margin-top: 11rem;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
 }
 
 @media (width < 1200px) {
   .slider {
     height: calc(85vh - 25rem);
-    margin-top: 12.2rem;
+    margin-top: 9rem;
   }
 }
 .container-services {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1140px;
   margin: -3.2rem auto 10rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,10 +257,10 @@ header .icon-user {
 }
 .container-services div h2 {
   color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.7rem;
   text-transform: uppercase;
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 2rem;
   margin-bottom: 1.6rem;
 }
 .container-services div img {
@@ -173,12 +270,12 @@ header .icon-user {
   width: 70%;
   color: #ffffff;
   background-color: #4F3A99;
-  border-radius: 12px;
+  border-radius: 5px;
   text-align: center;
-  font-size: 2rem;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 1.6rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
-  padding: 0.6rem;
+  padding: 1rem;
   position: absolute;
   bottom: 4.8rem;
   left: 50%;
@@ -214,7 +311,7 @@ header .icon-user {
   margin: 0 auto 5rem;
 }
 .container-sponsors h2 {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
 }
@@ -255,25 +352,25 @@ header .icon-user {
   align-items: center;
 }
 .container-sponsors .container-cotizacion .informacion-cotizacion h3 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: normal;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .container-sponsors .container-cotizacion .informacion-cotizacion .subtitle-cotizacion {
-  font-size: 2.9rem;
+  font-size: 2.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   margin: 1.4rem 0;
 }
-.container-sponsors .container-cotizacion .informacion-cotizacion p {
-  font-size: 2.2rem;
+.container-sponsors .container-cotizacion .informacion-cotizacion .description-cotizacion {
+  font-size: 1.8rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .container-sponsors .container-cotizacion .button-cotizacion {
   width: 32%;
   color: #ffffff;
   background-color: #7E4CEC;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -285,6 +382,12 @@ header .icon-user {
 }
 
 @media (width < 1200px) {
+  .container-sponsors .container-logos img {
+    width: 10rem;
+  }
+  .container-sponsors .container-logos img:nth-child(2) {
+    display: none;
+  }
   .container-sponsors .container-cotizacion {
     text-align: center;
     flex-direction: column;
@@ -292,8 +395,16 @@ header .icon-user {
   }
   .container-sponsors .container-cotizacion .button-cotizacion {
     width: 100%;
-    padding: 2rem 0.5rem;
-    font-size: 2.5rem;
+    padding: 1.5rem 0.5rem;
+    font-size: 2rem;
+  }
+}
+@media (width < 550px) {
+  .container-sponsors .container-logos img {
+    width: 8rem;
+  }
+  .container-sponsors .container-logos img:nth-child(2), .container-sponsors .container-logos img:nth-child(4) {
+    display: none;
   }
 }
 footer ul {
@@ -307,17 +418,17 @@ footer a, footer p, footer h2, footer h3, footer li {
 }
 footer .purple-part {
   background-image: url("../imgs/footer/footer_bg.png");
+  background-repeat: repeat-x;
   padding: 15rem 4rem 3rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   justify-content: space-between;
   align-items: baseline;
-  flex-wrap: wrap;
 }
 footer .purple-part .container-boletin {
   background-color: #4F3A99;
   padding: 1.7rem 3rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 0.7rem;
 }
 footer .purple-part .container-boletin h2 {
@@ -354,6 +465,9 @@ footer .purple-part .container-boletin .politicas a:hover {
   cursor: pointer;
   color: #80FF83;
   text-decoration: none;
+}
+footer .purple-part .container-links .container-title-arrow img {
+  display: none;
 }
 footer .purple-part .container-links h3 {
   text-transform: uppercase;
@@ -482,6 +596,7 @@ footer .pie-info a {
 }
 footer .pie-info .logos-alcaldia {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
   margin: 4rem 0 1rem;
@@ -497,6 +612,7 @@ footer .pie-info .container-derechos ul {
 }
 footer .pie-info .container-derechos ul li {
   border-right: 1px solid #494949;
+  text-align: center;
 }
 footer .pie-info .container-derechos ul li:last-of-type {
   border: none;
@@ -513,6 +629,100 @@ footer .pie-info .container-derechos ul li a:hover {
   color: #80FF83;
 }
 
+@media (width < 1200px) {
+  footer .purple-part {
+    grid-template-columns: auto auto;
+    padding: 15rem 8rem 3rem;
+    justify-content: inherit;
+    gap: 2rem;
+  }
+  footer .purple-part .container-boletin {
+    width: 100%;
+    max-width: 835px;
+    margin: 0 auto;
+    grid-column: 1/3;
+    text-align: center;
+    padding: 1.7rem 11rem;
+    gap: 1.5rem;
+  }
+  footer .purple-part .container-links,
+  footer .purple-part .container-ayuda,
+  footer .purple-part .container-extra-data,
+  footer .purple-part .container-social-medias {
+    margin: 0 auto;
+  }
+}
+@media (width < 670px) {
+  footer .purple-part {
+    grid-template-columns: auto;
+    padding: 0;
+    padding: 15rem 0rem 3rem;
+    background-repeat: repeat-x;
+    gap: 1rem;
+  }
+  footer .purple-part .container-boletin {
+    grid-column: inherit;
+    width: 90%;
+    padding: 2rem 2rem;
+  }
+  footer .purple-part .container-boletin .politicas {
+    font-size: 1.2rem;
+  }
+  footer .purple-part .container-links {
+    grid-row: 5/6;
+  }
+  footer .purple-part .container-links .container-title-arrow {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  footer .purple-part .container-links .container-title-arrow img {
+    display: block;
+    width: 30px;
+  }
+  footer .purple-part .container-links h3 {
+    font-size: 2rem;
+  }
+  footer .purple-part .container-links .links {
+    display: none;
+  }
+  footer .purple-part .container-links .links li {
+    font-size: 1.5rem;
+  }
+  footer .purple-part .container-ayuda h3 {
+    font-size: 2rem;
+  }
+  footer .purple-part .container-ayuda .ayuda {
+    font-size: 1.5rem;
+  }
+  footer .purple-part .container-extra-data {
+    border-bottom: 1px solid #80FF83;
+    height: 10.5rem;
+    font-size: 1.5rem;
+  }
+  footer .purple-part .container-social-medias {
+    width: 90%;
+    height: 7.5rem;
+    border-bottom: 1px solid #80FF83;
+    grid-row: 2/3;
+  }
+  footer .purple-part .container-social-medias h3 {
+    display: none;
+  }
+  footer .purple-part .container-social-medias .social-medias {
+    max-width: inherit;
+  }
+  footer .purple-part .container-social-medias .social-medias img {
+    width: 4rem;
+    height: 4rem;
+    padding: 10px 0;
+  }
+  footer .purple-part .container-links,
+  footer .purple-part .container-ayuda,
+  footer .purple-part .container-extra-data {
+    margin: 0 10%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -524,8 +734,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
-  min-width: 480px;
   background-image: url("../imgs/body_bg.png");
 }
 

@@ -10,21 +10,24 @@ footer{
     a, p, h2, h3, li{
         color: v.$white-color;
     }
-
     .purple-part{
         background-image: url('../imgs/footer/footer_bg.png');
+        background-repeat: repeat-x;
         padding: 15rem 4rem 3rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
         justify-content: space-between;
         align-items:baseline;
-        flex-wrap: wrap;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items:baseline;
+        
 
         .container-boletin{
             background-color: v.$purple-dark;
             // color: v.$white-color;
             padding: 1.7rem 3rem;
-            display: flex;
-            flex-direction: column;
+            display: grid;
             gap: 0.7rem;
             h2{
                 // font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -68,6 +71,11 @@ footer{
             }                      
         }
         .container-links{
+            .container-title-arrow{
+                img{
+                    display: none;
+                }
+            }
             h3{
                 text-transform: uppercase;
                 font-size: 1.7rem;
@@ -87,8 +95,6 @@ footer{
                 }
             }
         }
-
-
 
         .container-ayuda{
             a{
@@ -219,6 +225,7 @@ footer{
         }
         .logos-alcaldia{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 3rem;
             margin: 4rem 0 1rem;
@@ -235,6 +242,7 @@ footer{
                 padding: 1rem 0 2rem;
                 li{
                     border-right: 1px solid v.$black-light;
+                    text-align: center;
                     &:last-of-type{
                         border: none;
                     }
@@ -251,6 +259,120 @@ footer{
                     }
                 }
             }
+        }
+    }
+}
+
+@media(width < 1200px){
+    footer{
+        .purple-part{
+            grid-template-columns: auto auto;
+            padding: 15rem 8rem 3rem;
+            justify-content: inherit;
+            gap: 2rem;
+            
+            .container-boletin{
+                width: 100%;
+                max-width: 835px;
+                margin: 0 auto;
+                grid-column: 1/3;
+                text-align: center;
+                padding: 1.7rem 11rem;
+                gap: 1.5rem;
+            }
+            .container-links,
+            .container-ayuda,
+            .container-extra-data,
+            .container-social-medias{
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media(width < 670px){
+    footer{
+
+        .purple-part{
+            grid-template-columns: auto;
+            padding: 0;
+            padding: 15rem 0rem 3rem;
+            background-repeat: repeat-x;
+            gap: 1rem;
+
+            .container-boletin{
+                grid-column: inherit;
+                width: 90%;
+                padding: 2rem 2rem;
+                // min-width: 480px;
+                .politicas{
+                    font-size: 1.2rem;
+                }
+            }
+            .container-links{
+                grid-row: 5/6;
+                .container-title-arrow{
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    img{
+                        display: block;
+                        width: 30px;
+                    }
+                }
+                h3{
+                    font-size: 2rem;
+                }
+                .links{
+                    display: none;
+                    li{
+                        font-size:1.5rem;
+                    }
+                }
+            }
+            .container-ayuda{
+                h3{
+                    font-size: 2rem;
+                }
+                .ayuda{
+                    font-size:1.5rem;
+
+                }
+
+            }
+            .container-extra-data{
+                border-bottom: 1px solid v.$green-color;
+                height: 10.5rem;
+                font-size:1.5rem;
+
+            }
+            .container-social-medias{
+                width: 90%;
+                height: 7.5rem; 
+                border-bottom: 1px solid v.$green-color;
+                grid-row: 2/3;
+                h3{
+                    display: none;
+                }
+                
+                .social-medias{
+                    max-width: inherit;
+                    img{
+                        width: 4rem;
+                        height: 4rem;
+                        padding: 10px 0;
+
+                    }
+                }
+            }
+            .container-links,
+            .container-ayuda,
+            .container-extra-data{
+                margin: 0 10%;
+                
+            }
+            
+    
         }
     }
 }

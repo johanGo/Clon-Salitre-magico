@@ -3,18 +3,19 @@
 .slider{
     background-color: red;
     width: 100%;
-    height:calc(90vh - 12.8rem);
-    margin-top: 12.8rem;    
-    // img{
-    //     width: 150%;
-    //     height: 100%;
-    // }
+    min-width: 300px;
+    height:calc(100vh - 16rem);
+    margin-top: 11rem;    
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 @media(width < 1200px){
     .slider{
         // height:35rem;
     height:calc(85vh - 25rem);
-    margin-top: 12.2rem;    
+    margin-top: 9rem;    
 
     }
 }
