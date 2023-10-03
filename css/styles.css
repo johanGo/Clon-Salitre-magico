@@ -195,20 +195,18 @@ header .icon-user {
   }
 }
 .slider {
-  background-color: red;
+  background-color: transparent;
   width: 100%;
   min-width: 300px;
-  height: calc(100vh - 16rem);
   margin-top: 11rem;
 }
 .slider img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 @media (width < 1200px) {
   .slider {
-    height: calc(85vh - 25rem);
     margin-top: 9rem;
   }
 }
